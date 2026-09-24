@@ -1,0 +1,9 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+const articles=(await getCollection('blog',({data})=>!data.draft)).sort((a,b)=>a.data.title.localeCompare(b.data.title,'fr'));
+const categories=[['photographie-video','Photographie & vidéo'],['reception-restauration','Réception & restauration'],['ambiance-decoration','Ambiance & décoration'],['organisation-accompagnement','Organisation & accompagnement']] as const;
+const pages=[['Accueil','/'],['Photographie & vidéo','/photographie-video/'],['Réception & restauration','/reception-restauration/'],['Ambiance & décoration','/ambiance-decoration/'],['Organisation & accompagnement','/organisation-accompagnement/'],['Guides','/blog/'],['À propos','/a-propos/'],['Mentions légales','/mentions-legales/'],['Politique de confidentialité','/politique-confidentialite/']];
+---
+<BaseLayout title="Plan du site" description="Retrouvez toutes les pages et tous les guides publiés sur Prestataires de Mariage."><Breadcrumbs items={[{label:'Plan du site'}]} /><section class="section"><div class="container prose"><p class="eyebrow">Navigation</p><h1>Plan du site</h1><h2>Pages principales</h2><ul>{pages.map(([label,href])=><li><a href={href}>{label}</a></li>)}</ul>{categories.map(([key,label])=>{const entries=articles.filter(article=>article.data.category===key);return <><h2>{label}</h2>{entries.length ? <ul>{entries.map(article=><li><a href={`/blog/${article.id}/`}>{article.data.title}</a></li>)}</ul> : <p>Aucun guide publié pour le moment.</p>}</>})}</div></section></BaseLayout>

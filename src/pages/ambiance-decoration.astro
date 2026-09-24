@@ -1,0 +1,8 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CategoryHero from '../components/CategoryHero.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+const articles=(await getCollection('blog',({data})=>!data.draft&&data.category==='ambiance-decoration')).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
+---
+<BaseLayout title="Ambiance et décoration de mariage" description="DJ, groupe, fleurs, décoration, mobilier et animation : construisez une ambiance de mariage cohérente et accueillante."><CategoryHero eyebrow="Guide prestataires" title="Ambiance & décoration" description="Musique, fleurs, lumière, mobilier et détails de décor : les repères pour composer une ambiance cohérente, sans surcharge." /><section class="section"><div class="container"><p class="eyebrow">Guides de la catégorie</p><h2>Créer une expérience que vos invités retiendront.</h2><div class="card-grid">{articles.length ? articles.map((article)=><ArticleCard article={article}/>) : <p>Aucun guide publié dans cette catégorie pour le moment.</p>}</div></div></section></BaseLayout>

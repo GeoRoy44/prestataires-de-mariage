@@ -1,0 +1,6 @@
+---
+import type { CollectionEntry } from 'astro:content';
+const { article } = Astro.props as { article: CollectionEntry<'blog'> };
+const categoryLabels: Record<string,string> = {'photographie-video':'Photographie & vidéo','reception-restauration':'Réception & restauration','ambiance-decoration':'Ambiance & décoration','organisation-accompagnement':'Organisation & accompagnement'};
+---
+<article class="card"><p class="card__meta">{categoryLabels[article.data.category]}</p><h3><a href={`/blog/${article.id}/`}>{article.data.title}</a></h3><p>{article.data.description}</p><a href={`/blog/${article.id}/`}>Lire le guide <span aria-hidden="true">→</span></a></article>

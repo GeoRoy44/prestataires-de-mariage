@@ -1,0 +1,8 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CategoryHero from '../components/CategoryHero.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+const articles=(await getCollection('blog',({data})=>!data.draft&&data.category==='organisation-accompagnement')).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
+---
+<BaseLayout title="Organisation et accompagnement de mariage" description="Wedding planner, officiant, coordination, contrats et budget : structurez l’organisation de votre mariage avec méthode."><CategoryHero eyebrow="Guide prestataires" title="Organisation & accompagnement" description="Wedding planner, coordination, cérémonie, budget et contrats : les outils pour garder une vision claire jusqu’au jour J." /><section class="section"><div class="container"><p class="eyebrow">Guides de la catégorie</p><h2>S’organiser sans tout porter seul.</h2><div class="card-grid">{articles.length ? articles.map((article)=><ArticleCard article={article}/>) : <p>Aucun guide publié dans cette catégorie pour le moment.</p>}</div></div></section></BaseLayout>

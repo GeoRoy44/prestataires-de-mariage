@@ -1,0 +1,5 @@
+---
+const { eyebrow, title, description } = Astro.props;
+---
+<section class="category-hero"><div class="container"><p class="eyebrow">{eyebrow}</p><h1>{title}</h1><p class="lead">{description}</p></div></section>
+<style>.category-hero{padding:54px 0 62px;background:linear-gradient(115deg,var(--surface),var(--gold-soft));border-bottom:1px solid var(--line)}.category-hero h1{max-width:760px}</style>

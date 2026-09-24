@@ -1,0 +1,8 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CategoryHero from '../components/CategoryHero.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+const articles=(await getCollection('blog',({data})=>!data.draft&&data.category==='reception-restauration')).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
+---
+<BaseLayout title="Réception et restauration de mariage" description="Traiteur, boissons, gâteau, brunch : préparez une réception de mariage fluide, généreuse et adaptée à vos invités."><CategoryHero eyebrow="Guide prestataires" title="Réception & restauration" description="Repas, cocktails, boissons et contraintes alimentaires : préparez une réception agréable à vivre pour vous comme pour vos invités." /><section class="section"><div class="container"><p class="eyebrow">Guides de la catégorie</p><h2>Anticiper les détails qui font la fluidité.</h2><div class="card-grid">{articles.length ? articles.map((article)=><ArticleCard article={article}/>) : <p>Aucun guide publié dans cette catégorie pour le moment.</p>}</div></div></section></BaseLayout>

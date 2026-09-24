@@ -1,0 +1,8 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CategoryHero from '../components/CategoryHero.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+const articles = (await getCollection('blog', ({ data }) => !data.draft && data.category === 'photographie-video')).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
+---
+<BaseLayout title="Photographie et vidéo de mariage" description="Choisir un photographe ou un vidéaste de mariage : styles, tarifs, devis, contrat et questions à poser."><CategoryHero eyebrow="Guide prestataires" title="Photographie & vidéo" description="Du reportage à l’album, découvrez comment choisir des images fidèles à votre journée, à votre rythme et à votre budget." /><section class="section"><div class="container"><p class="eyebrow">Guides de la catégorie</p><h2>Faire le bon choix avant de signer.</h2><div class="card-grid">{articles.length ? articles.map((article)=><ArticleCard article={article}/>) : <p>Aucun guide publié dans cette catégorie pour le moment.</p>}</div></div></section></BaseLayout>

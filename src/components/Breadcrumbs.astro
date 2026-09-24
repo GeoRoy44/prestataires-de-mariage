@@ -1,0 +1,8 @@
+---
+interface Crumb { label: string; href?: string; }
+const { items } = Astro.props as { items: Crumb[] };
+---
+<nav class="breadcrumbs" aria-label="Fil d’Ariane"><ol><li><a href="/">Accueil</a></li>{items.map((item) => <li>{item.href ? <a href={item.href}>{item.label}</a> : <span aria-current="page">{item.label}</span>}</li>)}</ol></nav>
+<style>
+.breadcrumbs{padding-top:25px;font-size:.78rem;color:var(--muted)}.breadcrumbs ol{display:flex;flex-wrap:wrap;gap:7px;list-style:none;padding:0;margin:0}.breadcrumbs li+li:before{content:'/';margin-right:7px;color:#a49c8e}.breadcrumbs a{text-decoration:underline;text-underline-offset:3px}
+</style>

@@ -1,0 +1,9 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+const articles=(await getCollection('blog',({data})=>!data.draft)).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
+---
+<BaseLayout title="Guides pour choisir vos prestataires de mariage" description="Tous nos guides pour comprendre, comparer et choisir les prestataires de votre mariage."><Breadcrumbs items={[{label:'Guides'}]} /><section class="section"><div class="container"><p class="eyebrow">Bibliothèque éditoriale</p><h1>Guides pour choisir vos prestataires.</h1><p class="lead">Des repères concrets pour préparer vos rendez-vous, comprendre les devis et avancer avec des professionnels adaptés à votre projet.</p><div class="card-grid blog-grid">{articles.map(article=><ArticleCard article={article}/>)}</div></div></section></BaseLayout>
+<style>.blog-grid{margin-top:38px}</style>

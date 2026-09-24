@@ -1,0 +1,6 @@
+---
+import ArticleCard from './ArticleCard.astro';
+import type { CollectionEntry } from 'astro:content';
+const { articles } = Astro.props as { articles: CollectionEntry<'blog'>[] };
+---
+{articles.length > 0 && <section class="section section--soft"><div class="container"><p class="eyebrow">Pour aller plus loin</p><h2>Guides associés</h2><div class="card-grid">{articles.map((article) => <ArticleCard article={article} />)}</div></div></section>}

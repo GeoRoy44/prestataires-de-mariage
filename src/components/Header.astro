@@ -1,0 +1,20 @@
+---
+const navItems = [
+  { href: '/photographie-video/', label: 'Photo & vidéo' },
+  { href: '/reception-restauration/', label: 'Réception' },
+  { href: '/ambiance-decoration/', label: 'Ambiance' },
+  { href: '/organisation-accompagnement/', label: 'Organisation' },
+];
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Prestataires de Mariage, accueil"><span class="brand-mark">P</span><span>Prestataires<br />de Mariage</span></a>
+    <nav aria-label="Navigation principale"><ul>{navItems.map((item) => <li><a href={item.href}>{item.label}</a></li>)}<li><a href="/blog/">Guides</a></li></ul></nav>
+    <a class="header-cta" href="/plan-du-site/">Explorer les guides</a>
+  </div>
+</header>
+<style>
+.site-header{position:sticky;top:0;z-index:20;background:rgba(248,245,239,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.header-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:10px;font-family:'DM Serif Display',serif;font-size:1.06rem;line-height:1}.brand-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--forest);color:var(--gold-soft);font-size:1.45rem}.site-header ul{list-style:none;display:flex;gap:18px;padding:0;margin:0;font-size:.84rem;font-weight:800}.site-header nav a{color:#47423b}.header-cta{font-size:.8rem;font-weight:800;color:var(--forest);border-bottom:2px solid var(--gold)}
+@media(max-width:850px){.site-header nav{display:none}.header-cta{margin-left:auto}}
+</style>

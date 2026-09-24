@@ -1,0 +1,22 @@
+---
+interface Props { title: string; description: string; canonical?: string; image?: string; type?: 'website' | 'article'; publishedTime?: Date; modifiedTime?: Date; }
+const { title, description, canonical, image = '/favicon.svg', type = 'website', publishedTime, modifiedTime } = Astro.props;
+const site = 'https://prestatairesdemariage.fr';
+const url = canonical || new URL(Astro.url.pathname, site).toString();
+const imageUrl = new URL(image, site).toString();
+const fullTitle = title.includes('Prestataires de Mariage') ? title : `${title} | Prestataires de Mariage`;
+const schema = type === 'article' ? { '@context':'https://schema.org','@type':'Article',headline:title,description,datePublished:publishedTime?.toISOString(),dateModified:(modifiedTime || publishedTime)?.toISOString(),mainEntityOfPage:url,publisher:{'@type':'Organization',name:'Prestataires de Mariage',url:site} } : { '@context':'https://schema.org','@type':'WebSite',name:'Prestataires de Mariage',url:site,description };
+---
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={url} />
+<meta property="og:type" content={type} />
+<meta property="og:site_name" content="Prestataires de Mariage" />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={url} />
+<meta property="og:image" content={imageUrl} />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

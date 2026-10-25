@@ -1,0 +1,13 @@
+---
+const symbols = ['rings','spark','diamond','spark','rings','diamond','spark','rings'];
+---
+<div class="floating-symbols" aria-hidden="true">
+  {symbols.map((kind, index) => <span class={`floating-symbol symbol-${index + 1}`}><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" focusable="false">{kind === 'rings' ? <><circle cx="24" cy="34" r="15" /><circle cx="41" cy="29" r="15" /></> : kind === 'diamond' ? <><path d="M32 5 53 32 32 59 11 32Z" /><path d="M32 5v54M11 32h42" /></> : <path d="M32 5c0 20 7 27 27 27-20 0-27 7-27 27 0-20-7-27-27-27 20 0 27-7 27-27Z" />}</svg></span>)}
+</div>
+<style>
+.floating-symbols{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}.floating-symbol{position:absolute;display:block;width:46px;height:46px;color:#e2c379;opacity:.22;animation:symbol-float 18s ease-in-out infinite alternate}.floating-symbol svg{display:block;width:100%;height:100%}.symbol-1{left:3%;top:16%;width:62px;height:62px;animation-delay:-4s}.symbol-2{left:40%;top:7%;width:28px;height:28px;animation-delay:-9s}.symbol-3{left:61%;top:36%;width:35px;height:35px;animation-delay:-13s;color:#aaa4df}.symbol-4{right:5%;top:10%;animation-delay:-2s}.symbol-5{right:4%;bottom:16%;width:76px;height:76px;animation-delay:-11s}.symbol-6{left:29%;bottom:11%;width:30px;height:30px;animation-delay:-6s}.symbol-7{left:5%;bottom:25%;width:24px;height:24px;animation-delay:-15s}.symbol-8{left:53%;top:12%;width:48px;height:48px;animation-delay:-8s;color:#91a8de}
+:global(.luxe-hero-grid),:global(.luxe-hero-foot){position:relative;z-index:1}
+@keyframes symbol-float{0%{transform:translate3d(0,0,0) rotate(-12deg);opacity:.15}50%{opacity:.3}100%{transform:translate3d(12px,-30px,0) rotate(16deg);opacity:.2}}
+@media(max-width:700px){.symbol-3,.symbol-6,.symbol-8{display:none}.symbol-1{left:1%;top:3%;width:40px;height:40px}.symbol-4{right:2%;top:24%;width:28px;height:28px}.symbol-5{bottom:7%;right:3%;width:48px;height:48px}}
+@media(prefers-reduced-motion:reduce){.floating-symbol{animation:none;opacity:.18}}
+</style>

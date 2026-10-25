@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
+import FloatingSymbols from '../components/FloatingSymbols.astro';
 import '../styles/luxury-home.css';
 const articles = (await getCollection('blog', ({ data }) => !data.draft)).sort((a,b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const pillars = [
@@ -15,6 +16,7 @@ const pillars = [
   <div class="luxury-home">
     <section class="luxe-hero" aria-labelledby="hero-title">
       <div class="luxe-atmosphere" aria-hidden="true"><span class="luxe-halo luxe-halo--blue"></span><span class="luxe-halo luxe-halo--violet"></span><span class="luxe-halo luxe-halo--gold"></span><span class="luxe-orbit"></span><span class="luxe-stars"></span></div>
+      <FloatingSymbols />
       <div class="container luxe-hero-grid">
         <div class="luxe-intro"><p class="luxe-kicker">Le guide des futurs mariés</p><h1 id="hero-title">Une journée unique.<br />Les <em>bonnes personnes.</em></h1><p class="luxe-lead">Derrière chaque beau mariage, des professionnels bien choisis. Nos guides vous aident à comprendre, comparer et décider avec confiance.</p><div class="luxe-actions"><a class="luxe-button" href="/blog/">Découvrir les guides <span aria-hidden="true">↗</span></a><a class="luxe-text-link" href="#univers">Explorer les univers <span aria-hidden="true">↓</span></a></div><p class="luxe-caption">Photographie · Réception · Ambiance · Organisation</p></div>
         <aside class="luxe-manifesto"><span class="luxe-seal" aria-hidden="true">P / M</span><p class="luxe-kicker">Le sens du détail</p><h2>Choisir avec exigence.<br /><em>Avancer sereinement.</em></h2><p>Pas un annuaire interminable. Des repères concrets pour poser les bonnes questions, lire les devis et trouver votre équilibre.</p><a class="luxe-text-link" href="/a-propos/">Notre approche <span aria-hidden="true">→</span></a></aside>

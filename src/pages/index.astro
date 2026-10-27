@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import FloatingSymbols from '../components/FloatingSymbols.astro';
+import WeddingGallery from '../components/WeddingGallery.astro';
 import '../styles/luxury-home.css';
 const articles = (await getCollection('blog', ({ data }) => !data.draft)).sort((a,b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const pillars = [
@@ -23,6 +24,7 @@ const pillars = [
       </div>
       <div class="container luxe-hero-foot"><span>Comprendre avant de choisir</span><span>Votre mariage, vos priorités</span></div>
     </section>
+    <WeddingGallery />
     <section id="univers" class="section luxe-univers"><div class="container"><div class="luxe-section-heading"><div><p class="luxe-kicker">Quatre univers, une même exigence</p><h2>Les talents qui font<br /><em>la différence.</em></h2></div><p>À chaque étape, les bons repères pour choisir une prestation qui vous ressemble.</p></div><div class="luxe-pillars">{pillars.map(pillar => <a class="luxe-pillar" href={pillar.href}><span class="luxe-number">{pillar.number}</span><h3>{pillar.title}</h3><p>{pillar.text}</p><span class="luxe-pillar-link">Explorer <span aria-hidden="true">↗</span></span></a>)}</div></div></section>
     <section class="section luxe-guides"><div class="container"><div class="luxe-section-heading"><div><p class="luxe-kicker">Le carnet de conseils</p><h2>Des choix éclairés.<br /><em>Des préparatifs apaisés.</em></h2></div><a class="luxe-text-link" href="/blog/">Tous les guides <span aria-hidden="true">→</span></a></div><div class="card-grid">{articles.slice(0,3).map(article => <ArticleCard article={article} />)}</div></div></section>
     <section class="luxe-closing"><div class="container"><p class="luxe-kicker">L’essentiel, simplement</p><h2>Votre histoire mérite<br /><em>les bons partenaires.</em></h2><a class="luxe-button" href="/plan-du-site/">Préparer mes choix <span aria-hidden="true">↗</span></a></div></section>

@@ -4,7 +4,6 @@ const navItems = [
   { href: '/reception-restauration/', label: 'Lieux & traiteurs' },
   { href: '/ambiance-decoration/', label: 'Musique & décoration' },
   { href: '/organisation-accompagnement/', label: 'Organisation du mariage' },
-  { href: '/blog/', label: 'Conseils & guides' },
 ];
 const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
 ---
@@ -29,6 +28,6 @@ const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
 .header-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 14px;border:1px solid #30453c;border-radius:8px;font-size:.9rem;font-weight:800;line-height:1.4;color:#30453c}
 .header-cta:hover{background:#30453c;color:#fff}
 @media(max-width:1150px){.site-header nav{order:3;flex-basis:100%}.site-header ul{justify-content:flex-start}.header-cta{margin-left:auto}}
-@media(max-width:600px){.site-header{position:relative}.header-inner{gap:12px;padding-block:12px}.brand{font-size:1rem}.header-cta{font-size:.8rem;padding:8px 10px;max-width:48%}.site-header ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.site-header nav a{height:100%;padding:10px 8px;font-size:.95rem;background:#fffcf7;border-color:#ddd5c6}.site-header li:last-child{grid-column:1 / -1}}
+@media(max-width:600px){.site-header{position:relative}.header-inner{gap:12px;padding-block:12px}.brand{font-size:1rem}.header-cta{font-size:.8rem;padding:8px 10px;max-width:48%}.site-header ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.site-header nav a{height:100%;padding:10px 8px;font-size:.95rem;background:#fffcf7;border-color:#ddd5c6}}
 @media(prefers-reduced-motion:reduce){.site-header nav a{transition:none}}
 </style>

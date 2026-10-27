@@ -1,22 +1,28 @@
 ---
-interface Props { title: string; description: string; canonical?: string; image?: string; type?: 'website' | 'article'; publishedTime?: Date; modifiedTime?: Date; }
-const { title, description, canonical, image = '/favicon.svg', type = 'website', publishedTime, modifiedTime } = Astro.props;
-const site = 'https://prestatairesdemariage.fr';
-const url = canonical || new URL(Astro.url.pathname, site).toString();
-const imageUrl = new URL(image, site).toString();
-const fullTitle = title.includes('Prestataires de Mariage') ? title : `${title} | Prestataires de Mariage`;
-const schema = type === 'article' ? { '@context':'https://schema.org','@type':'Article',headline:title,description,datePublished:publishedTime?.toISOString(),dateModified:(modifiedTime || publishedTime)?.toISOString(),mainEntityOfPage:url,publisher:{'@type':'Organization',name:'Prestataires de Mariage',url:site} } : { '@context':'https://schema.org','@type':'WebSite',name:'Prestataires de Mariage',url:site,description };
+interface Props { title:string; description:string; canonical?:string; image?:string; type?:'website'|'article'; publishedTime?:Date; modifiedTime?:Date; }
+const {title,description,canonical,image='/favicon.svg',type='website',publishedTime,modifiedTime}=Astro.props;
+const site='https://prestatairesdemariage.fr';
+const path=Astro.url.pathname.replace(/\/+$/,'')||'/';
+const titles:Record<string,string>={
+'/':'Prestataires de mariage : des repères pour vos choix',
+'/photographie-video':'Photo et vidéo | Prestataires de Mariage',
+'/reception-restauration':'Réception et traiteur | Prestataires de Mariage',
+'/ambiance-decoration':'Ambiance et décoration | Prestataires de Mariage',
+'/organisation-accompagnement':'Organisation du mariage | Prestataires de Mariage',
+'/blog':'Guides pratiques | Prestataires de Mariage',
+'/a-propos':'Notre démarche | Prestataires de Mariage',
+'/plan-du-site':'Plan du site | Prestataires de Mariage',
+'/mentions-legales':'Mentions légales | Prestataires de Mariage',
+'/politique-confidentialite':'Confidentialité | Prestataires de Mariage',
+'/blog/budget-prestataires-mariage':'Budget des prestataires : devis et priorités',
+'/blog/comment-choisir-photographe-mariage':'Photographe de mariage : styles, offres et contrat',
+'/blog/questions-poser-traiteur-mariage':'Traiteur de mariage : menu, service et devis',
+};
+const descriptions:Record<string,string>={'/plan-du-site':'Les rubriques et les guides de Prestataires de Mariage, réunis par thème : photographie, repas, décoration et organisation de votre réception.'};
+const metaDescription=descriptions[path]||description;
+const fullTitle=titles[path]||title;
+const url=canonical||new URL(Astro.url.pathname,site).toString();
+const imageUrl=new URL(image,site).toString();
+const schema=type==='article'?{'@context':'https://schema.org','@type':'Article',headline:title,description:metaDescription,datePublished:publishedTime?.toISOString(),dateModified:(modifiedTime||publishedTime)?.toISOString(),mainEntityOfPage:url,publisher:{'@type':'Organization',name:'Prestataires de Mariage',url:site}}:{'@context':'https://schema.org','@type':'WebSite',name:'Prestataires de Mariage',url:site,description:metaDescription};
 ---
-<title>{fullTitle}</title>
-<meta name="description" content={description} />
-<link rel="canonical" href={url} />
-<meta property="og:type" content={type} />
-<meta property="og:site_name" content="Prestataires de Mariage" />
-<meta property="og:title" content={fullTitle} />
-<meta property="og:description" content={description} />
-<meta property="og:url" content={url} />
-<meta property="og:image" content={imageUrl} />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content={fullTitle} />
-<meta name="twitter:description" content={description} />
-<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+<title>{fullTitle}</title><meta name="description" content={metaDescription}/><link rel="canonical" href={url}/><meta property="og:type" content={type}/><meta property="og:site_name" content="Prestataires de Mariage"/><meta property="og:title" content={fullTitle}/><meta property="og:description" content={metaDescription}/><meta property="og:url" content={url}/><meta property="og:image" content={imageUrl}/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content={fullTitle}/><meta name="twitter:description" content={metaDescription}/><script type="application/ld+json" set:html={JSON.stringify(schema)}/>

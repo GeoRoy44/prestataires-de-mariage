@@ -1,0 +1,55 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import ComparisonText from './ComparisonText.astro';
+interface Props { article: CollectionEntry<'blog'>; }
+const {article}=Astro.props;
+const comparisonIds=[
+'wedding-planners-metz','wedding-planners-marseille','wedding-planners-cholet','wedding-planners-reims','wedding-planners-rochefort','wedding-planners-caen','wedding-planners-brest','wedding-planners-valence',
+'photographes-mariage-nantes','photographes-mariage-la-rochelle','photographes-mariage-nice','photographes-mariage-grenoble','photographes-mariage-chartres','photographes-mariage-tours','photographes-mariage-vannes',
+];
+const sourceFiles=import.meta.glob('../content/blog/*.md',{query:'?raw',import:'default',eager:true}) as Record<string,string>;
+const source=sourceFiles[`../content/blog/${article.id}.md`];
+if(!source)throw new Error(`Source du comparatif introuvable : ${article.id}`);
+const body=source.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/,'');
+const paragraphs=(text:string)=>text.trim().split(/\n\s*\n/).map(p=>p.trim().replace(/\s*\n\s*/g,' ')).filter(Boolean);
+const firstSection=body.search(/^## /m);
+const introduction=paragraphs(firstSection>=0?body.slice(0,firstSection):body);
+const providerPattern=/^### ([^\r\n]+)\r?\n([\s\S]*?)(?=^### |^## |(?![\s\S]))/gm;
+const commonSource=paragraphs(body).find(p=>p.startsWith('Source commune'));
+const providers=Array.from(body.matchAll(providerPattern)).map((match,index)=>{
+ const entries=paragraphs(match[2]);
+ const description=entries.filter(p=>!/^Sources?\s|^Source commune/.test(p)&&!p.startsWith('*'));
+ const sources=entries.filter(p=>/^Sources?\s|^Source commune/.test(p));
+ return {name:match[1].trim(),id:`prestataire-${index+1}`,description,sources:sources.length?sources:commonSource?[commonSource]:[]};
+});
+if(providers.length!==5)throw new Error(`Le comparatif ${article.id} doit contenir cinq prestataires, nombre trouve : ${providers.length}`);
+const allComparisons=(await getCollection('blog',({data})=>!data.draft&&data.category===article.data.category)).filter(entry=>comparisonIds.includes(entry.id)).sort((a,b)=>a.id.localeCompare(b.id,'fr'));
+const current=allComparisons.findIndex(entry=>entry.id===article.id);
+const otherComparisons=[...allComparisons.slice(current+1),...allComparisons.slice(0,current)].filter(entry=>entry.id!==article.id).slice(0,2);
+const isPhoto=article.data.category==='photographie-video';
+const parentHref=`/${article.data.category}/`;
+const parentLabel=isPhoto?'photographie et vidéo de mariage':'organisation et accompagnement';
+const note=paragraphs(body).find(p=>p.startsWith('*Repérage')||p.startsWith('*Sources repérées'))?.replace(/^\*|\*$/g,'');
+---
+<div class="comparison-body">
+  <aside class="comparison-summary" aria-labelledby="comparison-summary-title">
+    <p class="summary-label" id="comparison-summary-title">En résumé</p>
+    <ul><li>Cinq pistes documentaires pour préparer vos premières recherches.</li><li>Implantations déclarées, communes voisines et zones annoncées sont distinguées dans les présentations.</li><li>La numérotation suit l’ordre de présentation : elle ne mesure pas la qualité des prestations.</li><li>Disponibilités, assurances et conditions restent à confirmer directement.</li></ul>
+    <a href="#tableau-comparatif">Le tableau récapitulatif ↓</a>
+  </aside>
+  <div class="comparison-intro">{introduction.map(text=><p><ComparisonText text={text}/></p>)}</div>
+  <section aria-labelledby="tableau-comparatif"><h2 id="tableau-comparatif">Les cinq pistes en un regard</h2><p class="table-hint" id="comparison-table-help">Sur petit écran, le tableau peut défiler horizontalement.</p><div class="comparison-table" tabindex="0" role="region" aria-labelledby="tableau-comparatif" aria-describedby="comparison-table-help"><table><caption>Repérages documentaires, sans classement qualitatif</caption><thead><tr><th scope="col">Ordre</th><th scope="col">Prestataire</th><th scope="col">Repère issu des sources</th><th scope="col">Avant une réservation</th></tr></thead><tbody>{providers.map((provider,index)=><tr><td>{index+1}</td><th scope="row"><a href={`#${provider.id}`}>{provider.name}</a></th><td><ComparisonText text={provider.description[0]||'Présentation dans les sources citées ci-dessous.'}/></td><td>{isPhoto?'Lieu couvert, durée du reportage et livrables à confirmer.':'Lieu couvert, missions et présence le jour J à confirmer.'}</td></tr>)}</tbody></table></div></section>
+  {providers.map((provider,index)=><section class="provider-section" aria-labelledby={provider.id}><h2 id={provider.id}>{index+1}. {provider.name}</h2>{provider.description.map(text=><p><ComparisonText text={text}/></p>)}<div class="provider-sources">{provider.sources.map(text=><p><ComparisonText text={text}/></p>)}</div></section>)}
+  <section class="comparison-conclusion" aria-labelledby="conclusion-comparatif"><h2 id="conclusion-comparatif">La suite de vos recherches, à votre rythme</h2>
+    <p>{isPhoto?'Une image peut ouvrir une rencontre, mais un reportage se choisit aussi dans les échanges. Les galeries complètes donnent une place aux scènes que la vitrine montre moins.':'Une première liste ouvre des rencontres, sans dessiner votre mariage à votre place. Les missions souhaitées et les tâches déjà engagées précisent peu à peu votre besoin.'}</p>
+    <p>{isPhoto?'Les horaires, les déplacements et les images livrées permettent ensuite de rapprocher les offres.':'Les rendez-vous, les déplacements et la présence le jour du mariage permettent ensuite de rapprocher les offres.'}</p>
+    <p>La rubrique <a href={parentHref}>{parentLabel}</a> prolonge ces repères, avec les questions pratiques liées aux prestations.</p>
+    {otherComparisons.map(entry=><p>Un autre comparatif peut élargir le regard sur les zones annoncées : <a href={`/blog/${entry.id}/`}>{entry.data.title}</a>.</p>)}
+    <p>La proximité affichée ne remplace pas une confirmation du lieu couvert et des frais éventuels. Le choix reste lié à vos envies et aux conditions écrites.</p>
+  </section>
+  {note&&<p class="comparison-note">{note}</p>}
+</div>
+<style>
+.comparison-body{max-width:920px;color:#493D35;line-height:1.85}.comparison-summary{padding:26px 30px;margin-bottom:30px;background:#E8DED0;border:1px solid #cbbdad;border-left:4px solid #A99A89;border-radius:4px}.summary-label{font-weight:600;color:#252321;margin:0 0 12px}.comparison-summary ul{margin:0 0 14px;padding-left:22px}.comparison-summary li{margin-bottom:6px}.comparison-body a{color:#493D35;text-decoration:underline;text-underline-offset:3px}.comparison-body a:focus-visible{outline:3px solid #493D35;outline-offset:4px}.comparison-intro{max-width:760px}.comparison-body h2{margin:44px 0 20px;font-size:clamp(1.9rem,3.4vw,2.7rem);scroll-margin-top:190px}.table-hint{font-size:.8rem;margin-bottom:10px}.comparison-table{overflow-x:auto;border:1px solid #d9cfc2;border-radius:4px}.comparison-table:focus-visible{outline:3px solid #493D35;outline-offset:3px}.comparison-table table{border-collapse:collapse;width:100%;min-width:650px;background:#fffdf9;font-size:.9rem;line-height:1.65}.comparison-table caption{text-align:left;padding:14px 18px;background:#E8DED0;color:#493D35}.comparison-table th,.comparison-table td{padding:16px;text-align:left;vertical-align:top;border-bottom:1px solid #d9cfc2}.comparison-table thead{background:#E8DED0;color:#252321}.comparison-table tbody th{min-width:170px;font-weight:600}.comparison-table tbody tr:last-child th,.comparison-table tbody tr:last-child td{border-bottom:0}.provider-section{max-width:760px}.provider-sources{font-size:.83rem;overflow-wrap:anywhere}.provider-sources p{margin-bottom:8px}.comparison-conclusion{max-width:760px;border-top:1px solid #d9cfc2;margin-top:44px}.comparison-conclusion p{margin-bottom:14px}.comparison-note{font-size:.8rem;padding-top:24px;margin-top:28px;border-top:1px solid #d9cfc2;max-width:760px}@media(max-width:600px){.comparison-summary{padding:22px 18px}.comparison-table th,.comparison-table td{padding:12px}.comparison-body h2{scroll-margin-top:24px}}
+</style>

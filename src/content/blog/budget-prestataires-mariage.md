@@ -1,6 +1,6 @@
 ---
-title: "Préparer le budget de vos prestataires de mariage"
-description: "Classez vos priorités, comparez les prestations incluses et notez les paiements avant de signer vos devis."
+title: "Le budget de vos prestataires, au fil des priorités"
+description: "Les prestations incluses et les dates de paiement donnent une lecture plus précise des devis, au-delà du montant annoncé."
 pubDate: 2026-09-23
 updatedDate: 2026-10-27
 category: "organisation-accompagnement"
@@ -11,55 +11,55 @@ tags:
 draft: false
 ---
 
-Les premiers devis arrivent. L’un comprend le matériel, l’autre ajoute la livraison. Avant de comparer les montants, vérifiez ce que vous achetez.
+Les premiers devis arrivent sur la table. L’un comprend le matériel, l’autre ajoute la livraison. Derrière les montants, des prestations différentes se dessinent.
 
-Votre budget part de vos moyens et de vos priorités. Vous n’avez pas à retenir toutes les prestations envisagées.
+Votre budget donne un cadre à la réception. Vos priorités lui donnent une direction, sans obligation de retenir toutes les idées envisagées.
 
-## Choisissez les postes à garder
+## Les priorités comme point de départ
 
-Listez les prestations qui vous intéressent. Classez-les selon leur place dans votre réception :
+Le repas, les images ou la musique n’occupent pas la même place pour chaque couple. Une liste permet de distinguer plusieurs niveaux :
 
 - Les prestations nécessaires à votre projet.
-- Celles auxquelles vous tenez, mais que vous pouvez adapter.
-- Les options que vous pouvez laisser de côté.
+- Les envies auxquelles vous tenez, avec une marge d’adaptation.
+- Les options qui peuvent rester de côté.
 
-Le lieu, le repas, les photos ou la musique n’auront pas la même importance pour tous les couples. Faites vos propres choix.
+Cette répartition laisse une place aux préférences de chacun. Elle peut évoluer à mesure que le lieu et le nombre d’invités se précisent.
 
-## Comparez des prestations équivalentes
+## Ce que les montants racontent vraiment
 
-Préparez un même brief pour les professionnels consultés. Indiquez votre date, le lieu, le nombre d’invités et la durée souhaitée.
+Deux devis deviennent plus faciles à comparer lorsqu’ils répondent au même besoin. La date, le lieu, les invités et la durée souhaitée forment une base commune.
 
-Pour chaque devis, relevez :
+Les points suivants donnent de la matière à la comparaison :
 
 - Le prix total TTC.
-- La durée et les horaires de présence.
+- Les horaires et la durée de présence.
 - Le personnel et le matériel compris.
 - Les déplacements, la livraison et l’installation.
 - Les options et les heures supplémentaires.
-- Les éléments qui restent à votre charge.
+- Les tâches ou dépenses qui restent à votre charge.
 
-Pour le repas, consultez les [questions à poser au traiteur](/blog/questions-poser-traiteur-mariage/). Comparez le service et le matériel, pas seulement le prix par personne.
+Les [questions autour du traiteur](/blog/questions-poser-traiteur-mariage/) illustrent cette lecture. Le service et la vaisselle peuvent différencier deux offres au prix par personne voisin.
 
-## Gardez une somme pour les ajustements
+## Une place pour les ajustements
 
-Votre liste d’invités peut évoluer. Une location ou un déplacement peut aussi s’ajouter.
+Une réponse arrive après les autres et la liste des convives bouge encore. Une location ou un déplacement peut également s’ajouter.
 
-Prévoyez une réserve selon votre situation. Son montant dépend de ce qui reste à confirmer, sans pourcentage imposé.
+Une réserve peut accompagner ces ajustements. Son montant dépend de votre situation et des éléments encore incertains, sans pourcentage universel.
 
-## Notez les dates de paiement
+## Le calendrier derrière le prix
 
-Rassemblez les montants et les échéances dans un tableau. Distinguez le premier versement, les paiements intermédiaires et le solde.
+Le montant total ne dit pas quand les paiements seront demandés. Un tableau peut relier chaque somme à son échéance.
 
-Vérifiez si l’avance correspond à des arrhes ou à un acompte. Faites préciser les conditions avant de payer.
-
-| Prestation | Prix TTC | Inclus et options | Paiements | Points à confirmer |
+| Prestation | Prix TTC | Contenu | Paiements | Points en attente |
 | --- | --- | --- | --- | --- |
-| Chaque offre reçue | Montant du devis | Contenu détaillé | Dates et montants | Questions restantes |
+| Offre reçue | Montant annoncé | Inclus et options | Dates et montants | Informations à préciser |
 
-## Ajustez le contenu avant de négocier
+La nature du premier versement compte aussi. Arrhes et acompte n’ont pas les mêmes conséquences ; leur qualification mérite d’être clarifiée avant tout paiement.
 
-Une offre dépasse votre budget ? Demandez ce qui peut être retiré ou réduit : durée, quantité, matériel ou options.
+## Un contenu qui peut trouver son équilibre
 
-Comparez ensuite la nouvelle proposition avec vos besoins. Une prestation moins chère n’est utile que si elle couvre ce que vous souhaitez garder.
+Lorsqu’une offre dépasse le budget prévu, la discussion peut porter sur sa durée, les quantités ou les options. Les possibilités restent à confirmer avec le professionnel.
 
-Avant de signer, réunissez les devis et le calendrier des paiements. Consultez aussi la rubrique [organisation et accompagnement](/organisation-accompagnement/).
+Une proposition moins chère n’est pas nécessairement plus adaptée. Elle gagne à être rapprochée des moments et des services que vous souhaitez garder.
+
+Les devis et les échéances réunis donnent une vue d’ensemble avant la signature. La rubrique [organisation et accompagnement](/organisation-accompagnement/) prolonge cette réflexion.

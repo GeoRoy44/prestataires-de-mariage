@@ -1,6 +1,6 @@
 ---
-title: "Quelles questions poser à votre traiteur de mariage ?"
-description: "Précisez le repas, le service et les besoins de vos invités. Vérifiez ensuite le matériel, la livraison et les conditions du devis."
+title: "Votre traiteur de mariage : les questions autour de la table"
+description: "Du menu à l’installation, les échanges avec le traiteur précisent le repas, le service et les possibilités pour vos invités."
 pubDate: 2026-09-22
 updatedDate: 2026-10-27
 category: "reception-restauration"
@@ -11,54 +11,54 @@ tags:
 draft: false
 ---
 
-Votre liste d’invités avance. Vous hésitez entre un buffet et un repas servi à table. Avant de choisir les plats, précisez le déroulé souhaité.
+La liste des convives se précise et le repas entre dans les discussions. Un buffet vous attire, tandis qu’un dîner servi offre une autre organisation.
 
-Le menu ne résume pas la prestation. Vérifiez aussi le service, le matériel et les besoins du lieu.
+Au-delà des plats, la prestation réunit parfois le service, le matériel et la livraison. Leur présence dans l’offre reste à confirmer.
 
-## Commencez par le format du repas
+## Le repas dans le rythme de votre réception
 
-Présentez votre nombre d’invités et les espaces disponibles. Demandez quelles formules sont proposées, sans supposer qu’elles comprennent les mêmes éléments.
+Le nombre d’invités et les espaces disponibles orientent la conversation avec le traiteur. Chaque formule peut répondre à un déroulé différent.
 
-Comparez les points suivants :
+La comparaison peut porter sur :
 
-- Le cocktail, le repas et les éventuelles boissons.
-- Le service et sa durée.
+- Le cocktail, le repas et les boissons proposées.
+- La présence et la durée du service.
 - La vaisselle, le mobilier et le nappage.
 - Les propositions pour les enfants et les professionnels présents.
-- Les quantités minimales et les ajustements possibles.
+- Les quantités minimales et les modifications possibles.
 
-Demandez jusqu’à quelle date le nombre de repas peut changer. Faites préciser les conséquences sur le prix.
+La date limite de confirmation des couverts mérite d’être précisée. Un changement de quantité peut avoir des conséquences sur le prix.
 
-## Parlez des besoins alimentaires
+## Une attention aux besoins des convives
 
-Certains invités ont des allergies ou suivent un régime particulier ? Présentez les besoins au traiteur dès les premiers échanges.
+Certains proches ont une allergie, d’autres un régime alimentaire particulier. Ces informations gagnent à entrer tôt dans les échanges.
 
-Demandez des propositions précises et leur mode de service. Vérifiez comment les allergènes et les risques de contact croisé sont gérés.
+Une proposition précise permet de comprendre le repas envisagé et son service. La gestion des allergènes et des contacts croisés constitue une question distincte.
 
-Un plat adapté ne garantit pas, à lui seul, l’absence de risque allergique. Faites confirmer les possibilités réelles par le professionnel.
+Un plat adapté ne garantit pas l’absence de risque allergique. Les possibilités réelles nécessitent une confirmation du professionnel.
 
-## Vérifiez les conditions d’installation
+## Les coulisses du lieu
 
-Commencez par votre lieu. Le traiteur doit pouvoir expliquer ce dont il a besoin :
+Le menu prend place dans un environnement concret. Le traiteur peut préciser ses besoins à partir des équipements disponibles :
 
-- Les accès pour les livraisons.
-- Les équipements de cuisine et de stockage.
+- Les accès de livraison.
+- La cuisine et les espaces de stockage.
 - Les branchements nécessaires.
-- Le temps et l’espace pour installer le matériel.
-- Les conditions de débarrassage et de gestion des déchets.
+- Le temps et la place pour l’installation.
+- Le débarrassage et la gestion des déchets.
 
-Si votre réception se déroule dehors, demandez les solutions prévues selon la météo. Vérifiez leur coût et leur disponibilité.
+Une réception dehors ouvre aussi la question de la météo. Les solutions éventuelles, leur coût et leur disponibilité restent à discuter.
 
-## Distinguez les éléments inclus des options
+## Les limites entre inclus et options
 
-Relisez le devis avec votre programme. Demandez si le personnel, la livraison, les déplacements et les heures supplémentaires sont compris.
+Le devis permet de distinguer le personnel, les déplacements, la livraison et les heures supplémentaires. Une offre détaillée facilite les comparaisons.
 
-Vous apportez certaines boissons ? Renseignez-vous sur les conditions et les frais éventuels, sans supposer que cette option est acceptée.
+Si vous souhaitez apporter des boissons, l’accord du traiteur et les frais éventuels restent à préciser. Cette possibilité ne peut être présumée.
 
-Confirmez les modalités de paiement, d’annulation et de modification des quantités avant de signer.
+Les paiements, l’annulation et les modifications du nombre d’invités complètent le cadre de la réservation.
 
-## Préparez votre comparaison
+## Une lecture commune avant la réservation
 
-Rassemblez les réponses dans un même tableau. Comparez le prix total et les tâches qui resteront à votre charge.
+Un tableau réunissant les réponses laisse apparaître les différences entre les offres. Le prix total se lit alors avec les tâches qui restent à votre charge.
 
-Pour répartir vos dépenses, consultez le guide du [budget des prestataires](/blog/budget-prestataires-mariage/). Confirmez ensuite les quantités et le service souhaité avant de demander votre devis.
+Le guide du [budget des prestataires](/blog/budget-prestataires-mariage/) prolonge cette mise en perspective. Les quantités et le service souhaités donnent ensuite une base à votre demande de devis.

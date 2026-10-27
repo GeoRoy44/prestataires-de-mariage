@@ -1,6 +1,6 @@
 ---
-title: "Choisir votre photographe de mariage : les points à comparer"
-description: "Regardez des reportages complets, précisez les moments à photographier et vérifiez les images comprises dans chaque offre."
+title: "Le photographe de votre mariage : un regard et des repères"
+description: "Les reportages complets, les moments couverts et les conditions de livraison éclairent la rencontre avec votre photographe."
 pubDate: 2026-09-24
 updatedDate: 2026-10-27
 category: "photographie-video"
@@ -11,54 +11,54 @@ tags:
 draft: false
 ---
 
-Vous avez enregistré plusieurs photos. Certaines montrent les proches autour d’une table, d’autres privilégient les portraits. Reste à choisir ce que vous souhaitez garder.
+Quelques photographies attendent dans votre dossier d’inspiration. Un portrait vous retient, puis une scène autour d’une table. Peu à peu, les souvenirs souhaités prennent forme.
 
-Commencez par les moments qui comptent pour vous. Comparez ensuite le travail du photographe et le contenu de sa prestation.
+Le choix d’un photographe relie cette sensibilité au contenu d’une prestation. Le regard compte, tout comme les horaires, les images livrées et la manière de travailler.
 
-## Précisez les moments à photographier
+## Les moments qui ont une place pour vous
 
-Vous pouvez souhaiter des images de la cérémonie, du repas, des proches ou des préparatifs. Vous n’avez pas à prévoir chaque étape.
+La cérémonie, les proches ou le repas peuvent constituer le cœur du reportage. Les préparatifs et la soirée ne sont pas des passages obligés.
 
-Notez les personnes et les moments que vous aimeriez retrouver en images. Cette liste vous aidera pendant le premier échange.
+Une liste des personnes et des moments importants offre un point de départ au rendez-vous. Elle laisse aussi une place aux images imprévues.
 
-## Regardez un reportage complet
+## Un reportage au-delà de ses images choisies
 
-Demandez à voir une prestation entière, pas seulement une sélection de portraits. Observez les photos prises dans différents espaces et à plusieurs moments.
+Une prestation complète montre les portraits, les déplacements et les changements de lumière. Elle apporte une autre lecture qu’une sélection de quelques photographies.
 
-Votre réception se déroule dans une salle peu éclairée ? Demandez des exemples réalisés dans des conditions proches.
+Si votre réception se déroule dans une salle sombre, des exemples comparables peuvent nourrir l’échange. Leur pertinence dépend des conditions réellement rencontrées.
 
-Regardez aussi la place des photos posées et des images spontanées. Le style doit correspondre à ce que vous souhaitez conserver.
+La place des images posées et des scènes spontanées mérite aussi votre attention. Elle aide à préciser le type de présence qui vous convient.
 
-## Vérifiez ce que le devis comprend
+## Les contours de la prestation
 
-Comparez les offres à partir des mêmes critères :
+Un devis détaillé permet de rapprocher le style et les conditions proposées :
 
 - Les horaires et la durée de présence.
-- Le nombre de photographes présents.
+- Le nombre de photographes.
 - Les images livrées et les retouches prévues.
-- Le format de livraison et son délai.
-- La galerie en ligne, si elle est proposée.
-- Les albums et les tirages, inclus ou en option.
+- Le format et le délai de livraison.
+- La galerie en ligne, si elle existe dans l’offre.
+- Les albums et les tirages, inclus ou optionnels.
 - Les déplacements et les éventuels frais d’hébergement.
 
-Ne supposez pas qu’une galerie, un album ou un nombre d’images est compris. Demandez une confirmation écrite.
+Une galerie ou un album ne peut être supposé compris. Une confirmation écrite précise la place de chaque élément.
 
-## Préparez votre rendez-vous
+## Une conversation pour faire connaissance
 
-Expliquez le déroulé envisagé et vos contraintes. Quelques questions peuvent vous aider :
+Votre programme et les contraintes du lieu donnent un cadre au premier échange. Quelques questions permettent de comprendre la méthode du professionnel :
 
-- Comment organisez-vous les photos de groupe ?
-- Que proposez-vous si la réception se déroule sous la pluie ?
-- Qui réalisera la prestation ?
-- Que prévoyez-vous en cas d’empêchement ?
-- Comment sont précisés la livraison et les usages autorisés des images ?
+- Comment les photos de groupe sont-elles organisées ?
+- Quelles possibilités sont prévues en cas de pluie ?
+- Qui assurera le reportage ?
+- Quel dispositif existe en cas d’empêchement ?
+- Comment sont définis la livraison et les usages des images ?
 
-L’échange vous permet aussi de vérifier si la manière de travailler vous convient.
+Les réponses éclairent les aspects pratiques. La qualité de l’écoute participe aussi à votre appréciation, sans constituer à elle seule une garantie.
 
-## Relisez les conditions avant de verser une avance
+## Le contrat comme cadre partagé
 
-Vérifiez le prix, les paiements, les délais annoncés et les conditions d’annulation. Faites préciser l’utilisation des images et les possibilités de publication.
+Le prix, les paiements et les délais annoncés trouvent leur place dans les conditions écrites. L’annulation et l’utilisation des images demandent également une lecture attentive.
 
-Un point reste flou ? Demandez une réponse écrite avant de vous engager.
+Les points encore flous peuvent faire l’objet d’un échange avant tout versement. Une réponse écrite permet de conserver une référence commune.
 
-Comparez vos offres avec votre liste de moments à garder. Pour préparer les autres dépenses, consultez le guide du [budget des prestataires](/blog/budget-prestataires-mariage/).
+Votre liste de moments et les offres reçues peuvent alors se lire ensemble. Le guide du [budget des prestataires](/blog/budget-prestataires-mariage/) accompagne les autres arbitrages.

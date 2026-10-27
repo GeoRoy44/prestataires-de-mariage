@@ -1,0 +1,52 @@
+:root{--bg:#F8F5EF;--surface:#fffdf9;--ink:#252321;--muted:#493D35;--gold:#A99A89;--gold-dark:#493D35;--gold-soft:#E8DED0;--forest:#493D35;--line:#d9cfc2;--max:1180px}
+html body{background:#F8F5EF!important;color:#252321;font-family:'Manrope',Arial,sans-serif;line-height:1.8}
+::selection{background:#E8DED0;color:#252321}
+h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400;color:#252321;letter-spacing:-.025em}
+a:focus-visible{outline:3px solid #493D35!important;outline-offset:4px}
+html body .site-header{background:#F8F5EF!important;border-bottom:1px solid #d9cfc2!important;box-shadow:none}
+html body .site-header .brand,html body .site-header nav a,html body .site-header .header-cta{color:#252321!important}
+html body .site-header .brand-mark{background:#493D35!important;color:#F8F5EF!important}
+html body .site-header nav a:hover{background:#E8DED0!important;color:#252321!important}
+html body .site-header nav a[aria-current='page']{background:#493D35!important;color:#F8F5EF!important}
+html body .header-cta{border-color:#493D35!important;background:transparent!important}
+html body .header-cta:hover{background:#E8DED0!important}
+html body .site-footer{background:#E8DED0!important;color:#252321!important;border-top:1px solid #d9cfc2!important}
+html body .site-footer .footer-brand,html body .site-footer a,html body .site-footer h2{color:#252321!important}
+html body .site-footer p,html body .site-footer .copyright{color:#493D35!important}
+html body .copyright{border-top-color:#cbbdad!important}
+html body .card{background:#fffdf9!important;border:1px solid #d9cfc2!important;border-radius:4px!important;box-shadow:none;padding:30px}
+html body .card:hover{box-shadow:0 14px 32px rgba(73,61,53,.08)!important;border-color:#A99A89!important;transform:translateY(-3px)}
+html body .card p,html body .card__meta,html body .card a:last-child{color:#493D35!important}
+html body .button{background:#493D35;color:#F8F5EF;border-color:#493D35;border-radius:3px}
+html body .button:hover{background:#252321;color:#F8F5EF;border-color:#252321}
+html body .button--ghost{background:transparent;color:#493D35}
+html body .notice{background:#E8DED0;border-color:#A99A89}
+html body .section--soft{background:#E8DED0}
+html body .eyebrow{color:#493D35}
+html body .luxury-home{--luxe-black:#F8F5EF;--luxe-blue:#E8DED0;--luxe-gold:#493D35;--luxe-muted:#493D35;--luxe-white:#252321;background:#F8F5EF!important;color:#252321!important}
+html body .luxe-hero{background:#F8F5EF!important;border-bottom-color:#d9cfc2!important}
+html body .luxe-atmosphere{background:linear-gradient(120deg,#F8F5EF 35%,#E8DED0)!important}
+html body .luxe-halo,html body .luxe-stars{display:none}
+html body .luxe-orbit{border-color:rgba(169,154,137,.25);box-shadow:none}
+html body .luxe-kicker{color:#493D35;font-size:.76rem;letter-spacing:.16em}
+html body .luxury-home em{color:#493D35}
+html body .luxe-lead,html body .luxe-caption,html body .luxe-manifesto>p:not(.luxe-kicker),html body .luxe-hero-foot{color:#493D35!important}
+html body .luxe-lead{font-size:1.12rem;line-height:1.9}
+html body .luxe-manifesto{background:#E8DED0!important;border-color:#cbbdad!important;border-radius:100px 3px 3px 3px;box-shadow:none}
+html body .luxe-hero-foot{border-top-color:#d9cfc2;font-size:.73rem;letter-spacing:.1em}
+html body .luxe-button{background:#493D35!important;border-color:#493D35!important;color:#F8F5EF!important;border-radius:3px;font-size:.95rem;box-shadow:none}
+html body .luxe-button:hover{background:#252321!important;border-color:#252321!important;box-shadow:0 8px 20px rgba(73,61,53,.12)}
+html body .luxe-text-link{color:#252321;border-bottom-color:#A99A89;font-size:.95rem}
+html body .luxe-text-link:hover{color:#493D35}
+html body .luxe-pillar{background:#fffdf9!important;border-color:#d9cfc2!important;border-radius:3px;padding:32px 24px}
+html body .luxe-pillar:hover{color:#252321;border-color:#A99A89!important}
+html body .luxe-pillar p{font-size:.94rem;color:#493D35}
+html body .luxe-pillar-link{font-size:.85rem;color:#493D35}
+html body .luxe-guides{background:#E8DED0!important;border-color:#d9cfc2!important}
+html body .luxe-closing{background:#F8F5EF!important;border-top:1px solid #d9cfc2}
+html body .floating-symbol{color:#A99A89!important;opacity:.2}
+html body .prose{line-height:1.9}
+html body .prose h2{padding-top:10px}
+@media(min-width:951px){html body .luxe-hero-grid{padding-top:112px;padding-bottom:100px}}
+@media(max-width:600px){html body .site-header nav a{background:#fffdf9;border-color:#d9cfc2}html body .luxe-manifesto{border-radius:48px 3px 3px 3px}html body .card{padding:24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}html body .card,html body .button,html body .luxe-pillar,html body .luxe-button{transition:none;transform:none}}

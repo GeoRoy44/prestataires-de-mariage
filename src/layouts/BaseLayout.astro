@@ -1,9 +1,10 @@
 ---
 import '../styles/global.css';
+import '../styles/editorial-theme.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import SEOHead from '../components/SEOHead.astro';
 interface Props { title: string; description: string; }
 const { title, description } = Astro.props;
 ---
-<!doctype html><html lang="fr"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="theme-color" content="#30453C" /><meta name="linkavista" content="608a0a124c7ecdc79324afb0542fdc8bfc6da068" /><meta name='aaf01a14d1' content='aaf01a14d1080e5ef6951e1254092542'><SEOHead title={title} description={description} /></head><body><!-- e150ad3ebe3c2b5fb91192c9ef244127 --><a class="skip-link" href="#main-content">Aller au contenu</a><Header /><main id="main-content"><slot /></main><Footer /></body></html>
+<!doctype html><html lang="fr"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="theme-color" content="#F8F5EF" /><meta name="linkavista" content="608a0a124c7ecdc79324afb0542fdc8bfc6da068" /><meta name='aaf01a14d1' content='aaf01a14d1080e5ef6951e1254092542'><SEOHead title={title} description={description} /></head><body><!-- e150ad3ebe3c2b5fb91192c9ef244127 --><a class="skip-link" href="#main-content">Aller au contenu</a><Header /><main id="main-content"><slot /></main><Footer /></body></html>

@@ -1,0 +1,18 @@
+:root{--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'Jost',Arial,sans-serif}
+html body{font-family:var(--font-body)!important;font-size:17px;line-height:1.75;font-weight:400}
+html body h1,html body h2,html body h3,html body .brand,html body .footer-brand,html body .brand-mark,html body .luxe-number,html body .luxe-seal{font-family:var(--font-display)!important}
+html body h1,html body h2,html body h3{font-weight:500!important;letter-spacing:-.025em;line-height:1.12}
+html body h1 em,html body h2 em,html body h3 em{font-family:var(--font-display);font-weight:500!important;font-style:italic}
+html body .hero-content h1{font-size:clamp(2.5rem,5.8vw,5.4rem);line-height:1.03;letter-spacing:-.025em}
+html body .brand{font-size:1.3rem;font-weight:600;line-height:1}
+html body .footer-brand{font-size:2rem;font-weight:600}
+html body .site-header nav a,html body .header-cta,html body .hero-actions a,html body .luxe-button,html body .button{font-family:var(--font-body)!important;font-weight:600;letter-spacing:.015em}
+html body .site-header nav a{font-size:1rem;line-height:1.4}
+html body .luxe-kicker,html body .hero-eyebrow,html body .eyebrow,html body .card__meta{font-family:var(--font-body)!important;font-weight:600;letter-spacing:.16em}
+html body .site-footer h2{font-family:var(--font-body)!important;font-weight:600!important;letter-spacing:.12em}
+html body .prose{font-size:1.06rem;line-height:1.85}
+html body .prose h2{font-size:clamp(2rem,4vw,3rem)}
+html body .prose h3{font-size:1.85rem}
+html body .card h3,html body .luxe-pillar h3{font-size:1.8rem;line-height:1.14}
+@media(max-width:700px){html body .hero-content h1{font-size:clamp(2.2rem,8.3vw,3.4rem)}html body .brand{font-size:1.15rem}html body .site-header nav a{font-size:.95rem}}
+@media(max-height:650px){html body .hero-content h1{font-size:clamp(1.8rem,4vw,3rem)}}

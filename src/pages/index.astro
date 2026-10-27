@@ -8,21 +8,21 @@ import WeddingFAQ from '../components/WeddingFAQ.astro';
 import '../styles/luxury-home.css';
 const articles = (await getCollection('blog', ({ data }) => !data.draft)).sort((a,b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const pillars = [
-  {href:'/photographie-video/',number:'01',title:'Photographie & vidéo',text:'Un regard singulier pour raconter votre journée et préserver ce qui compte.'},
-  {href:'/reception-restauration/',number:'02',title:'Réception & restauration',text:'Des saveurs, un service et une réception pensés pour vos invités.'},
-  {href:'/ambiance-decoration/',number:'03',title:'Ambiance & décoration',text:'La musique, les fleurs et les détails qui donnent une âme à votre réception.'},
-  {href:'/organisation-accompagnement/',number:'04',title:'Organisation & accompagnement',text:'Des décisions éclairées, un budget structuré et une journée sereine.'},
+  {href:'/photographie-video/',number:'01',title:'Photographie & vidéo',text:'Choisissez les moments à photographier. Comparez ensuite les reportages, la durée de présence et les images livrées.'},
+  {href:'/reception-restauration/',number:'02',title:'Réception & restauration',text:'Précisez votre nombre d’invités et le format du repas. Vérifiez le service, le matériel et les besoins du lieu.'},
+  {href:'/ambiance-decoration/',number:'03',title:'Ambiance & décoration',text:'Regardez la place disponible avant de choisir les fleurs, le mobilier et la musique. Votre décoration peut rester simple.'},
+  {href:'/organisation-accompagnement/',number:'04',title:'Organisation & accompagnement',text:'Notez vos priorités, votre budget et les tâches à répartir. Choisissez ensuite l’accompagnement dont vous avez besoin.'},
 ];
 ---
-<BaseLayout title="Choisir ses prestataires de mariage" description="Des guides concrets pour comparer, sélectionner et travailler sereinement avec les prestataires de votre mariage.">
-  <div class="luxury-home">
-    <WeddingHero />
-    <section class="section"><div class="container luxe-section-heading"><div><p class="luxe-kicker">Le sens du détail</p><h2>Choisir avec exigence.<br /><em>Avancer sereinement.</em></h2></div><div class="approach-copy"><p>Derrière chaque beau mariage, des professionnels bien choisis. Nos guides vous aident à comprendre, comparer et décider avec confiance.</p><p>Pas un annuaire interminable. Des repères concrets pour poser les bonnes questions, lire les devis et trouver votre équilibre.</p><a class="luxe-text-link" href="/a-propos/">Notre approche <span aria-hidden="true">→</span></a></div></div></section>
-    <WeddingGallery />
-    <section id="univers" class="section luxe-univers"><div class="container"><div class="luxe-section-heading"><div><p class="luxe-kicker">Quatre univers, une même exigence</p><h2>Les talents qui font<br /><em>la différence.</em></h2></div><p>À chaque étape, les bons repères pour choisir une prestation qui vous ressemble.</p></div><div class="luxe-pillars">{pillars.map(pillar => <a class="luxe-pillar" href={pillar.href}><span class="luxe-number">{pillar.number}</span><h3>{pillar.title}</h3><p>{pillar.text}</p><span class="luxe-pillar-link">Explorer <span aria-hidden="true">↗</span></span></a>)}</div></div></section>
-    <section class="section luxe-guides"><div class="container"><div class="luxe-section-heading"><div><p class="luxe-kicker">Le carnet de conseils</p><h2>Des choix éclairés.<br /><em>Des préparatifs apaisés.</em></h2></div><a class="luxe-text-link" href="/blog/">Tous les guides <span aria-hidden="true">→</span></a></div><div class="card-grid">{articles.slice(0,3).map(article => <ArticleCard article={article} />)}</div></div></section>
-    <section class="luxe-closing"><div class="container"><p class="luxe-kicker">L’essentiel, simplement</p><h2>Votre histoire mérite<br /><em>les bons partenaires.</em></h2><a class="luxe-button" href="/plan-du-site/">Préparer mes choix <span aria-hidden="true">↗</span></a></div></section>
-    <WeddingFAQ />
-  </div>
+<BaseLayout title="Choisir vos prestataires de mariage" description="Préparez vos rendez-vous et comparez les prestations selon votre lieu, votre budget et vos invités.">
+<div class="luxury-home">
+<WeddingHero />
+<section class="section"><div class="container luxe-section-heading"><div><p class="luxe-kicker">Avant vos premiers rendez-vous</p><h2>Précisez vos besoins.<br /><em>Comparez les prestations.</em></h2></div><div class="approach-copy"><p>Votre liste de professionnels prend forme. Reste à comprendre ce que chaque offre comprend et ce qui correspond à votre réception.</p><p>Commencez par votre lieu, votre budget et vos invités. Nos guides vous aident à préparer vos questions, sans vous imposer un modèle de mariage.</p><a class="luxe-text-link" href="/a-propos/">Découvrir notre méthode <span aria-hidden="true">→</span></a></div></div></section>
+<WeddingGallery />
+<section id="univers" class="section luxe-univers"><div class="container"><div class="luxe-section-heading"><div><p class="luxe-kicker">Quatre rubriques pour préparer vos choix</p><h2>De quoi avez-vous<br /><em>besoin pour votre réception ?</em></h2></div><p>Partez d’une question concrète. Consultez les critères utiles avant de contacter un professionnel.</p></div><div class="luxe-pillars">{pillars.map(pillar => <a class="luxe-pillar" href={pillar.href}><span class="luxe-number">{pillar.number}</span><h3>{pillar.title}</h3><p>{pillar.text}</p><span class="luxe-pillar-link">Comparer les options <span aria-hidden="true">↗</span></span></a>)}</div></div></section>
+<section class="section luxe-guides"><div class="container"><div class="luxe-section-heading"><div><p class="luxe-kicker">Pour préparer vos échanges</p><h2>Un devis à comparer.<br /><em>Des questions à poser.</em></h2></div><a class="luxe-text-link" href="/blog/">Consulter tous les guides <span aria-hidden="true">→</span></a></div><div class="card-grid">{articles.slice(0,3).map(article => <ArticleCard article={article} />)}</div></div></section>
+<section class="luxe-closing"><div class="container"><p class="luxe-kicker">À votre rythme</p><h2>Choisissez votre prochaine étape.<br /><em>Vous n’avez pas à tout décider maintenant.</em></h2><a class="luxe-button" href="/plan-du-site/">Trouver le guide dont vous avez besoin <span aria-hidden="true">↗</span></a></div></section>
+<WeddingFAQ />
+</div>
 </BaseLayout>
 <style>.approach-copy{max-width:520px;color:#493D35}.approach-copy p{font-size:1rem}</style>

@@ -1,8 +1,8 @@
 ---
-title: "Comment choisir un photographe de mariage : méthode, budget et questions utiles"
-description: "Une méthode concrète pour comparer les photographes de mariage, comprendre leurs prestations et préparer un échange utile avant de signer."
+title: "Choisir votre photographe de mariage : les points à comparer"
+description: "Regardez des reportages complets, précisez les moments à photographier et vérifiez les images comprises dans chaque offre."
 pubDate: 2026-09-24
-updatedDate: 2026-09-24
+updatedDate: 2026-10-27
 category: "photographie-video"
 tags:
   - photographe mariage
@@ -11,35 +11,54 @@ tags:
 draft: false
 ---
 
-Choisir un photographe de mariage ne consiste pas seulement à préférer une belle image sur Instagram. Vous choisissez aussi une manière de raconter la journée, une présence humaine et un cadre de travail qui doit rester fluide du matin à la soirée.
+Vous avez enregistré plusieurs photos. Certaines montrent les proches autour d’une table, d’autres privilégient les portraits. Reste à choisir ce que vous souhaitez garder.
 
-## Commencez par définir ce que vous voulez garder
+Commencez par les moments qui comptent pour vous. Comparez ensuite le travail du photographe et le contenu de sa prestation.
 
-Avant de comparer les portfolios, notez ce qui compte le plus pour vous : les moments spontanés, les photos de famille, les détails de décoration, les portraits posés ou l’ambiance de la soirée. Cette liste vous aide à distinguer un style qui vous plaît d’une prestation réellement adaptée à votre mariage.
+## Précisez les moments à photographier
 
-Regardez toujours un reportage complet, et pas uniquement une sélection de photos fortes. Vous pourrez ainsi observer la régularité du travail, la gestion de la lumière et la façon dont le photographe raconte les différents temps de la journée.
+Vous pouvez souhaiter des images de la cérémonie, du repas, des proches ou des préparatifs. Vous n’avez pas à prévoir chaque étape.
 
-## Comparez le contenu réel des offres
+Notez les personnes et les moments que vous aimeriez retrouver en images. Cette liste vous aidera pendant le premier échange.
 
-Un devis devient comparable lorsqu’il précise le périmètre. Vérifiez notamment :
+## Regardez un reportage complet
 
-- Les horaires de présence et les éventuels frais de dépassement.
-- Le nombre de photographes présents le jour J.
-- La galerie en ligne, son délai de livraison et sa durée d’accès.
-- Le nombre d’images livrées, lorsqu’il est indiqué.
-- Les retouches incluses et les options d’album ou de tirages.
-- Les frais de déplacement et d’hébergement éventuels.
+Demandez à voir une prestation entière, pas seulement une sélection de portraits. Observez les photos prises dans différents espaces et à plusieurs moments.
 
-Le prix seul ne suffit pas : une formule plus courte peut sembler moins chère tout en laissant de côté les moments que vous souhaitez conserver.
+Votre réception se déroule dans une salle peu éclairée ? Demandez des exemples réalisés dans des conditions proches.
 
-## Préparez les bonnes questions
+Regardez aussi la place des photos posées et des images spontanées. Le style doit correspondre à ce que vous souhaitez conserver.
 
-Demandez au photographe comment il organise les photos de groupe, comment il travaille en cas de pluie et ce qui se passe s’il est empêché le jour du mariage. Demandez aussi des exemples pris dans des conditions proches des vôtres : mariage hivernal, cérémonie tardive, salle sombre ou réception en extérieur.
+## Vérifiez ce que le devis comprend
 
-## Lisez le contrat avant l’acompte
+Comparez les offres à partir des mêmes critères :
 
-Le contrat doit présenter la prestation, le prix, les modalités de paiement, les délais de livraison, les conditions d’annulation et le cadre d’utilisation des images. Prenez le temps d’éclaircir les zones floues avant de verser un acompte.
+- Les horaires et la durée de présence.
+- Le nombre de photographes présents.
+- Les images livrées et les retouches prévues.
+- Le format de livraison et son délai.
+- La galerie en ligne, si elle est proposée.
+- Les albums et les tirages, inclus ou en option.
+- Les déplacements et les éventuels frais d’hébergement.
 
-## À retenir
+Ne supposez pas qu’une galerie, un album ou un nombre d’images est compris. Demandez une confirmation écrite.
 
-Le bon photographe est celui dont le regard vous parle, dont le format de prestation couvre les moments importants pour vous et dont le contrat vous donne une vision nette de ce qui est inclus. Pour préparer vos autres arbitrages, consultez aussi notre guide sur le [budget des prestataires de mariage](/blog/budget-prestataires-mariage/).
+## Préparez votre rendez-vous
+
+Expliquez le déroulé envisagé et vos contraintes. Quelques questions peuvent vous aider :
+
+- Comment organisez-vous les photos de groupe ?
+- Que proposez-vous si la réception se déroule sous la pluie ?
+- Qui réalisera la prestation ?
+- Que prévoyez-vous en cas d’empêchement ?
+- Comment sont précisés la livraison et les usages autorisés des images ?
+
+L’échange vous permet aussi de vérifier si la manière de travailler vous convient.
+
+## Relisez les conditions avant de verser une avance
+
+Vérifiez le prix, les paiements, les délais annoncés et les conditions d’annulation. Faites préciser l’utilisation des images et les possibilités de publication.
+
+Un point reste flou ? Demandez une réponse écrite avant de vous engager.
+
+Comparez vos offres avec votre liste de moments à garder. Pour préparer les autres dépenses, consultez le guide du [budget des prestataires](/blog/budget-prestataires-mariage/).

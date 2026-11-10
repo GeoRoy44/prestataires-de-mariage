@@ -1,0 +1,48 @@
+---
+import type { CollectionEntry } from 'astro:content';
+interface Props { article: CollectionEntry<'blog'>; }
+const { article } = Astro.props;
+const summaries: Record<string, string[]> = {
+  'prix-moyen-videaste-mariage': [
+    'Pour votre vidéaste de mariage, prévoyez une enveloppe indicative de 1 500 à 4 000 €, à ajuster selon la couverture et les films livrés.',
+    'Ces repères ne constituent pas une moyenne nationale : les horaires, le montage et les options expliquent une partie des écarts.',
+    'Comparez des devis de même périmètre et demandez le total à payer, déplacements et suppléments compris.'
+  ],
+  'budget-prestataires-mariage': [
+    'Le budget des prestataires de mariage se construit autour de vos priorités, du lieu et du nombre d’invités.',
+    'Le prix seul ne suffit pas : les prestations incluses et les échéances peuvent différencier deux devis.',
+    'Réunissez les montants, les options et les dates de paiement dans un même tableau avant de signer.'
+  ],
+  'comment-choisir-photographe-mariage': [
+    'Le choix de votre photographe de mariage repose sur le style du reportage, les moments couverts et les images livrées.',
+    'Une sélection de belles photos ne remplace pas l’examen de galeries complètes et des conditions proposées.',
+    'Précisez vos horaires et vos attentes, puis comparez les prestations écrites avant de réserver.'
+  ],
+  'questions-poser-traiteur-mariage': [
+    'Votre traiteur de mariage doit préciser le menu, le service et les conditions d’installation dans votre lieu.',
+    'Deux prix par personne ne sont comparables que si les quantités, le personnel et le matériel inclus sont connus.',
+    'Demandez un devis détaillé et confirmez les besoins alimentaires, les frais supplémentaires et la date limite de modification des couverts.'
+  ]
+};
+const isPhoto = article.id.startsWith('photographes-mariage-');
+const isPlanner = article.id.startsWith('wedding-planners-');
+const comparisonSummary = [
+  article.data.description,
+  'Ces cinq pistes documentaires sont présentées sans classement qualitatif ; les implantations et les zones annoncées sont distinguées.',
+  isPhoto
+    ? 'Comparez des galeries complètes et confirmez directement les disponibilités, les horaires et les images livrées.'
+    : 'Précisez les missions souhaitées et confirmez directement les disponibilités, les déplacements et la présence le jour J.'
+];
+const fallback: Record<string, string[]> = {
+  'photographie-video': ['Le style du reportage et les moments couverts sont des critères à comparer avec les livrables.', 'Précisez vos attentes et demandez des conditions écrites avant de réserver.'],
+  'reception-restauration': ['Le nombre de convives, le service et les contraintes du lieu donnent un cadre à la comparaison.', 'Demandez un devis détaillant les quantités, les inclusions et les frais supplémentaires.'],
+  'ambiance-decoration': ['Les possibilités du lieu et les conditions d’installation comptent autant que le rendu souhaité.', 'Confirmez les besoins techniques, les horaires et le budget avec les professionnels concernés.'],
+  'organisation-accompagnement': ['Vos priorités et les missions attendues donnent une base à la comparaison des prestations.', 'Rassemblez les engagements, les échéances et les montants dans un document partagé avant de réserver.']
+};
+const sentences = summaries[article.id] ?? ((isPhoto || isPlanner) ? comparisonSummary : [article.data.description, ...fallback[article.data.category]]);
+---
+<aside class="article-brief" aria-labelledby="article-brief-title">
+  <p class="article-brief__eyebrow">Les points essentiels</p>
+  <h2 id="article-brief-title">En bref</h2>
+  <div class="article-brief__text">{sentences.map(sentence => <p>{sentence}</p>)}</div>
+</aside>

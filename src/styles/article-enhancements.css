@@ -1,0 +1,25 @@
+.article-brief{box-sizing:border-box;max-width:920px;margin:0 0 36px;padding:28px 32px;border:1px solid #d9cfc2;border-left:4px solid #a87550;border-radius:14px;background:linear-gradient(120deg,#f1f3ee,#fffdf9);box-shadow:0 10px 30px rgb(30 36 36 / 5%);color:#1e2424}
+.article-brief__eyebrow{margin:0 0 8px;color:#0c4023;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.article-brief h2{margin:0 0 14px;font-size:clamp(1.6rem,3vw,2rem);line-height:1.2}
+.article-brief__text{max-width:78ch}
+.article-brief__text p{margin:0 0 10px;font-size:1rem;line-height:1.8}
+.article-brief__text p:last-child{margin-bottom:0}
+.article .comparison-body .comparison-summary{display:none}
+.article .prose{min-width:0}
+.article :is(.prose,.comparison-body) table{box-sizing:border-box;width:100%;margin:28px 0;border:1px solid #d9cfc2;border-spacing:0;border-collapse:separate;border-radius:12px;background:#fffdf9;color:#1e2424;font-size:.95rem;line-height:1.65;box-shadow:0 8px 24px rgb(30 36 36 / 5%)}
+.article :is(.prose,.comparison-body) table th,.article :is(.prose,.comparison-body) table td{padding:17px 20px;text-align:left;vertical-align:top;white-space:normal;overflow-wrap:break-word;border:0;border-bottom:1px solid #e4ddd3}
+.article :is(.prose,.comparison-body) table thead{background:#0c4023;color:#f1f3f3}
+.article :is(.prose,.comparison-body) table thead th{color:#f1f3f3;font-weight:600;border-bottom-color:#0c4023}
+.article :is(.prose,.comparison-body) table thead th:first-child{border-top-left-radius:11px}
+.article :is(.prose,.comparison-body) table thead th:last-child{border-top-right-radius:11px}
+.article :is(.prose,.comparison-body) table tbody tr:nth-child(even){background:#f5f2eb}
+.article :is(.prose,.comparison-body) table tbody tr:hover{background:#edf2ed}
+.article :is(.prose,.comparison-body) table tbody th{font-weight:600}
+.article :is(.prose,.comparison-body) table tbody tr:last-child>*{border-bottom:0}
+.article :is(.prose,.comparison-body) table a{color:#0c4023;text-decoration:underline;text-underline-offset:3px}
+.article :is(.prose,.comparison-body) table a:focus-visible{outline:3px solid #a87550;outline-offset:3px}
+.article .comparison-table{border-radius:12px}
+.article .comparison-table table{margin:0;border:0;box-shadow:none}
+.article .comparison-table caption{padding:16px 20px;background:#f1eee7;color:#1e2424;text-align:left}
+@media(max-width:760px){.article-brief{padding:22px 20px;margin-bottom:28px}.article .prose table{display:block;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}.article .prose table th,.article .prose table td{min-width:150px;padding:14px 16px}.article .comparison-table table th,.article .comparison-table table td{padding:14px 16px}}
+@media print{.article-brief{box-shadow:none;background:#fff}.article .prose table{display:table;overflow:visible;box-shadow:none}.article .prose table th,.article .prose table td{min-width:0}.article :is(.prose,.comparison-body) table thead{background:#eee;color:#000}.article :is(.prose,.comparison-body) table thead th{color:#000}}
